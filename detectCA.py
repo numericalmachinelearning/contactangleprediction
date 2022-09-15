@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import os
-from contact_angles import *
+from contactangleprediction.contactangles import *
 from math import atan, degrees, pi, tan, sin, sqrt, asin, cos, radians
 imageformat = ".png"
 path = '/20x20/'

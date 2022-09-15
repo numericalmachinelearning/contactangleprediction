@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 #import cv2
 import os
-from contact_angles import *
+from contactangleprediction.contactangles import *
 imageformat = ".png"
 path = '/20x20/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
