@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import os
 from numba import jit
 imageformat = ".png"
-path = '/home/alessandro/Documents/Python/droplet/droplet_database/600_3/'
-savepath = '/home/alessandro/Documents/Python/droplet/droplet_database/error_analysis/600/'
+path = '/600_3/'
+savepath = '/600/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()
 data = []
@@ -21,11 +21,6 @@ for IMG in imfilelist:
    image = cv2.imread(IMG)
    data.append(image)
 
-
-#path = '/home/alessandro/Documents/Python/droplet/droplet_database/'
-#n = 44
-#image = cv2.imread(path +'300_3/' + '%04d' %n +'.png')
-#img = image.copy()
 
 def pre(img):
     image = img[:,:,0]
@@ -103,10 +98,3 @@ for image in data:
     filename = savepath+'crop%04d' %i +'.png'
     cv2.imwrite(filename, img)
     i=i+1
-
-# plot the result
-image = cv2.imread('crop0079.png')
-#image = cv2.imread('lines5074.png')
-image = image /255
-#image[20:30,0:30,:]=0 #[y,x]
-plt.imshow(image, cmap='gray')

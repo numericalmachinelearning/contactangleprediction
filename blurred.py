@@ -11,8 +11,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 imageformat = ".png"
-path = '/home/alessandro/droplet_database/lines/lines_20/'
-savepath = '/home/alessandro/droplet_database/lines/20x20_test/'
+path = '/lines_20/'
+savepath = '/20x20_test/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()
 data = []
@@ -53,29 +53,3 @@ data = []
 for i in range(len(array)):
     img = cv2.imread(path+array[i])
     data.append(img)
-    
-
-
-
-img = cv2.imread('/home/alessandro/droplet_database/lines/lines_20/lines0178.png') #blur00129.png, lines2129.png
-img = cv2.GaussianBlur(img,(3,3),0)
-img[18:,:]=0
-cv2.imwrite('test.png', img)
-plt.imshow(img) 
-
-img = cv2.imread('/home/alessandro/droplet_database/lines/20x20_test/blur20163.png') #blur00129.png, lines2129.png
-
-image = cv2.imread('test.png') #blur00129.png, lines2129.png
-plt.imshow(image) 
-#image = cv2.imread('/home/alessandro/droplet_database/lines/1000_2/crop0020.png')
-#image = cv2.imread('/home/alessandro/droplet_database/pic/4.png')
-image = image /255
-#img = cv2.imread('crop0020.png')
-#img = cv2.blur(img,(7,7))
-img[18:,:]=0
-plt.imshow(img) 
-img = cv2.imread('/home/alessandro/droplet_database/lines/20x20_test/blur20163.png') #blur00129.png, lines2129.png
-img = img /255
-img[1:,:]=0
-#image[20:30,0:30,:]=0 #[y,x]
-plt.imshow(img, cmap='gray')

@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 #import cv2
 import os
-#from math import atan, degrees, pi, tan, sin, sqrt, asin, cos, radians
+from contact_angles import *
 imageformat = ".png"
-path = '/home/alessandro/Documents/Python/droplet/droplet_database/20x20/'
+path = '/20x20/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()
 
@@ -85,12 +85,9 @@ from sklearn.metrics import r2_score
 r2_score(y_test, y_pred)
 
 # =============================================================================
-# img = image.load_img('/home/alessandro/Documents/Python/droplet/droplet_database/error_analysis/1000/crop0137.png', target_size=(20,20,1), color_mode='grayscale') #20,44,121,190
-# #img = image.load_img('/home/alessandro/droplet_database/pic/crop5a.png', target_size=(20,20,1), color_mode='grayscale')
-# #img = image.load_img('/home/alessandro/droplet_database/lines/20x20_test/blur20177.png', target_size=(20,20,1), color_mode='grayscale') 
+# img = image.load_img('/crop0137.png', target_size=(20,20,1), color_mode='grayscale') #20,44,121,190
 # img = image.img_to_array(img)
 # img = img /255
-# #img[20:30,0:30,:]=0 #[y,x]
 # img = img.reshape(1,400)
 # prediction = regressor.predict(img)
 # print(prediction*180)
@@ -100,7 +97,7 @@ r2_score(y_test, y_pred)
 from tqdm import tqdm
 #import contact_angles
 imageformat = ".png"
-path = '/home/alessandro/Documents/Python/droplet/droplet_database/error_analysis/1200/'
+path = '/error_analysis/1200/'
 
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()

@@ -10,9 +10,10 @@ import cv2
 import numpy as np
 from matplotlib import pyplot as plt
 import os
+from contact_angles import *
 from math import atan, degrees, pi, tan, sin, sqrt, asin, cos, radians
 imageformat = ".png"
-path = '/home/alessandro/Documents/Python/droplet/droplet_database/20x20/'
+path = '/20x20/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()
 
@@ -144,7 +145,7 @@ history = model.fit_generator(
         steps_per_epoch = training_set.samples,
         validation_data=test_set,
         validation_steps = test_set.samples,
-        epochs=15) # number of images in the test_set
+        epochs=15)
 
 
 loss = history.history['loss']
@@ -161,9 +162,9 @@ plt.show()
 # =============================================================================
 # # Testing the dataset on new images
 # from keras.preprocessing import image
-# img = image.load_img('/home/alessandro/Documents/Python/droplet/droplet_database/error_analysis/1000/crop0137.png', target_size=(20,20,1), color_mode='grayscale') #20,44,121,190
-# #img = image.load_img('/home/alessandro/droplet_database/pic/crop5a.png', target_size=(20,20,1), color_mode='grayscale')
-# #img = image.load_img('/home/alessandro/droplet_database/lines/20x20_test/blur20177.png', target_size=(20,20,1), color_mode='grayscale') 
+# img = image.load_img('/crop0137.png', target_size=(20,20,1), color_mode='grayscale') #20,44,121,190
+# #img = image.load_img('/crop5a.png', target_size=(20,20,1), color_mode='grayscale')
+# #img = image.load_img('/20x20_test/blur20177.png', target_size=(20,20,1), color_mode='grayscale') 
 # img = image.img_to_array(img)
 # img = img /255
 # #img[20:30,0:30,:]=0 #[y,x]
@@ -174,7 +175,7 @@ plt.show()
 # from tqdm import tqdm
 # #import contact_angles
 # imageformat = ".png"
-# path = '/home/alessandro/Documents/Python/droplet/droplet_database/error_analysis/1200/'
+# path = '/error_analysis/1200/'
 # 
 # imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 # imfilelist.sort()
@@ -205,7 +206,7 @@ plt.show()
 #     #error[i] = abs((contact_angle[i]-arr[0][i])/arr[0][i])
 #     error[i] = abs((contact_angle[i]-arr[0][i]))
 # #ERROR= sum(list(error))/len(error) #average    
-# savepath = '/home/alessandro/Documents/Python/droplet/droplet_database/error_csv/'
+# savepath = '/error_csv/'
 # cnn_measurment = list(zip(np.array(arr[0]), error))
 # 
 # av_err = sum(list(error))/len(error)
