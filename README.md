@@ -10,4 +10,5 @@ $$
  \label{e0}
 \end{equation}
 $$
-![CA](https://user-images.githubusercontent.com/46897230/190351021-6bf64659-d039-458c-8b2e-868a79a499c2.png)
+
+![CA](https://user-images.githubusercontent.com/46897230/190351246-d8726b6d-c447-4255-a028-1d42bcb5def7.png)
