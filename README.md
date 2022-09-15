@@ -10,5 +10,4 @@ $$
  \label{e0}
 \end{equation}
 $$
-
-![plot](./home/alessandro/Documents/git/contactangleprediction/CA.png)
+![CA](https://user-images.githubusercontent.com/46897230/190351021-6bf64659-d039-458c-8b2e-868a79a499c2.png)
