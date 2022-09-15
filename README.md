@@ -10,3 +10,5 @@ $$
  \label{e0}
 \end{equation}
 $$
+
+![plot](./home/alessandro/Documents/git/contactangleprediction/CA.png)
