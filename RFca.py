@@ -11,8 +11,15 @@ import pandas as pd
 #import cv2
 import os
 from contactangleprediction.contactangles import *
-imageformat = ".png"
-path = '/20x20/'
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('path', type=str, help='input the path')
+parser.add_argument('imageformat', type=str, default=".png", help='input the image format')
+args = parser.parse_args()
+imageformat = args.imageformat
+path = args.path
+#imageformat = ".png"
+#path = '/20x20/'
 imfilelist = [os.path.join(path,f) for f in os.listdir(path) if f.endswith(imageformat)]
 imfilelist.sort()
 
